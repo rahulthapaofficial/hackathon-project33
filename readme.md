@@ -3,7 +3,7 @@
 - Password: tfg@project33100%
 - Database Name: hackathon-project33
 <p align="center">
-<a href="http://192.168.1.135/tfg/hackathon-project33"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="http://192.168.1.135/tfg/hackathon-project33">Admin Panel</a>
 </p>
 
 ## Admin Crednetial
