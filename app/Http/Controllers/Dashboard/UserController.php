@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
+use Gate;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
@@ -30,20 +31,20 @@ class UserController extends Controller
         }
         foreach ($users as $key => $user) {
             if ($user->status == 1) {
-                $status = '<span class="label label-success userStatusBtn" data-id="' . $user->id . '" data-value="1">Active</span>';
+                $status = '<span class="badge badge-success userStatusBtn" data-id="' . $user->id . '" data-value="1">Active</span>';
             } else {
-                $status = '<span class="label label-warning  userStatusBtn" data-id="' . $user->id . '" data-value="0">Inactive</span>';
+                $status = '<span class="badge badge-warning  userStatusBtn" data-id="' . $user->id . '" data-value="0">Inactive</span>';
             }
             $buttons = '';
             if (Gate::check('suspend-user')) {
                 if ($user->status == 0) {
-                    $buttons .= '<a class="btn btn-xs btn-success userStatusModifyBtn" data-id="' . $user->id . '" data-value="1"><i class="fa fa-thumbs-up"></i> Activate</a>';
+                    $buttons .= '<a class="btn btn-sm btn-success userStatusModifyBtn text-white" data-id="' . $user->id . '" data-value="1"><i class="fa fa-thumbs-up"></i> Activate</a>';
                 } else {
-                    $buttons .= '<a class="btn btn-xs btn-danger userStatusModifyBtn" data-id="' . $user->id . '" data-value="0"><i class="fa fa-ban"></i> Suspend</a>';
+                    $buttons .= '<a class="btn btn-sm btn-danger userStatusModifyBtn text-white" data-id="' . $user->id . '" data-value="0"><i class="fa fa-ban"></i> Suspend</a>';
                 }
             }
             if (Gate::check('modify-user')) {
-                $buttons .= '&nbsp;<a href="' . route('users.edit', $user->id) . '" class="btn btn-xs btn-primary"><i class="fa fa-edit"></i> Modify</a>';
+                $buttons .= '&nbsp;<a href="' . route('users.edit', $user->id) . '" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> Modify</a>';
             }
             if (!Gate::check('suspend-user') && !Gate::check('modify-user')) {
                 $buttons .= '<i class="fa fa-exclamation-triangle" style="color: orange"></i> No Permission';
@@ -129,6 +130,18 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         //
+    }
+    
+    public function updatestatus(Request $request, $id)
+    {
+        if ($request->ajax()) {
+            $user = User::find($id);
+            $user->status = $request->user_status;
+            $user->update();
+            return $user->status;
+        } else {
+            return "Sorry! Mr. LOL Bro :)";
+        }
     }
 
     /**

@@ -3,7 +3,17 @@
 @push('custom-styles')
 <link rel="stylesheet" href="http://demos.ui-lib.com/gull/dist-assets/css/plugins/datatables.min.css" />
 @endpush
+@push('custom-styles')
+<style>
+    #userTable table#dataTables tbody {
+        text-align: center;
+    }
 
+    #userTable table#dataTables tbody tr td {
+        vertical-align: middle;
+    }
+</style>
+@endpush
 @section('main-content')
 <div class="main-content">
     <div class="breadcrumb">
@@ -27,13 +37,13 @@
                                     class="fa fa-plus"></i> Create New User</a>
                         </div>
                     </div>
-                    <div class="table-responsive">
-                        <table class="display table table-striped table-bordered" id="alternative_pagination_table"
-                            style="width:100%">
+                    <div class="table-responsive" id="userTable">
+                        <table class="display table table-striped table-bordered" id="dataTables" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>S.N</th>
                                     <th>Name</th>
+                                    <th>Branch</th>
                                     <th>Email</th>
                                     <th>Phone No.</th>
                                     <th>Address</th>
@@ -41,21 +51,11 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
-                                    <td>$320,800</td>
-                                </tr>
-                            </tbody>
                             <tfoot>
                                 <tr>
                                     <th>S.N</th>
                                     <th>Name</th>
+                                    <th>Branch</th>
                                     <th>Email</th>
                                     <th>Phone No.</th>
                                     <th>Address</th>
@@ -77,11 +77,41 @@
 <script src="http://demos.ui-lib.com/gull/dist-assets/js/scripts/datatables.script.min.js"></script>
 <script>
     $(document).ready(function () {
-        alert(base_url);
         $('#userManage').addClass('active');
-        manageTable = $('#alternative_pagination_table').DataTable({
-            'ajax': base_url + '/users/fetchUsers',
+        manageTable = $('#dataTables').DataTable({
+            'ajax': base_url + '/dashboard/users/fetchUsers',
             'order': []
+        });
+        
+        $(document).on('click', '.userStatusModifyBtn', function(){
+            beforeAction('Updating User Status');
+            let userId = $(this).data('id');
+            let userStatus = $(this).data('value');
+            let updateStatusUrl = `{{ url('dashboard/users/updatestatus/${userId}') }}`;
+            
+            $.ajax({
+                method: 'PATCH',
+                url: updateStatusUrl,
+                data: {
+                    user_status: userStatus
+                },
+            }).then(function(responseData){
+                if(responseData == 1){
+                    Toast.fire({
+                        position: 'top-end',
+                        type:'success',
+                        title: 'User Activated Successfully.'
+                    });
+                }else{
+                    Toast.fire({
+                        position: 'top-end',
+                        type:'error',
+                        title: 'User Suspended Successfully.'
+                    });
+                }
+                manageTable.ajax.reload(null, false);
+            });
+            afterAction();
         });
     });
 </script>
