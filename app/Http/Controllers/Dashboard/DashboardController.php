@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Company;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,9 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard.index');
+        $companiesMaps = Company::get(['name', 'latitude', 'longitude']);
+        // dd($companiesMaps);
+        return view('dashboard.index', compact('companiesMaps'));
     }
 
     /**

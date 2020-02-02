@@ -27,11 +27,11 @@ class PermissionsTableSeeder extends Seeder
                 'modify-role'
             ],
 
-            'Branches' => [
-                'view-branch',
-                'create-branch',
-                'modify-branch',
-                'suspend-branch'
+            'Companies' => [
+                'view-company',
+                'create-company',
+                'modify-company',
+                'suspend-company'
             ],
 
             'Customers' => [

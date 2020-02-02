@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Company;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
@@ -86,9 +87,8 @@ class UserController extends Controller
     public function create()
     {
         $roles = Role::where([['name', '<>', 'Administrator'], ['name', '<>', 'Super Administrator']])->get();
-        // $branches = Company::whereStatus(1)->get();
-        // return view('pages.users.create', compact(['roles', 'branches']));
-        return view('dashboard.users.create', compact('roles'));
+        $companies = Company::whereStatus(1)->get();
+        return view('dashboard.users.create', compact(['roles', 'companies']));
     }
 
     /**

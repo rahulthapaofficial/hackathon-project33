@@ -36,4 +36,13 @@ Route::prefix('dashboard')->middleware('auth:web')->group(function () {
         Route::get('/edit/{id}', 'Dashboard\UserController@edit')->name('users.edit');
         Route::patch('/updatestatus/{id}', 'Dashboard\UserController@updatestatus')->name('users.updatestatus');
     });
+
+    Route::prefix('companies')->group(function () {
+        Route::get('/', 'Dashboard\CompanyController@index')->name('companies.index');
+        Route::get('/create', 'Dashboard\CompanyController@create')->name('companies.create');
+        Route::post('/', 'Dashboard\CompanyController@store')->name('companies.store');
+        Route::get('/fetchCompanies', 'Dashboard\CompanyController@fetchCompanies')->name('companies.fetchCompanies');
+        Route::get('/edit/{id}', 'Dashboard\CompanyController@edit')->name('companies.edit');
+        Route::patch('/updatestatus/{id}', 'Dashboard\CompanyController@updatestatus')->name('companies.updatestatus');
+    });
 });
