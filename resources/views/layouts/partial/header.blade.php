@@ -83,8 +83,9 @@
         <div class="dropdown">
             <div class="badge-top-container" role="button" id="dropdownNotification" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="badge badge-primary">3</span>
-                <i class="i-Bell text-muted header-icon"></i>
+                <span class="badge badge-primary" style="color: #663399; background: #fff">3</span>
+                <i class="fa fa-bell fa-2x header-icon text-white"></i>
+                {{-- <i class="i-Bell text-muted header-icon"></i> --}}
             </div>
             <!-- Notification dropdown -->
             <div class="dropdown-menu dropdown-menu-right notification-dropdown rtl-ps-none"
@@ -155,7 +156,7 @@
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                     <div class="dropdown-header">
-                        <i class="i-Lock-User mr-1"></i> Timothy Carlson
+                        <i class="i-Lock-User mr-1"></i> {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}
                     </div>
                     <a class="dropdown-item">Account settings</a>
                     <a class="dropdown-item">Billing history</a>

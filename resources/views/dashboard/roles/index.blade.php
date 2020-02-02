@@ -27,7 +27,7 @@
                             <h4 class="card-title mb-3">All Roles</h4>
                         </div>
                         <div class="col-sm-2 text-white">
-                            <a href="{{ route('roles.create') }}" class="btn btn-primary btn-round btn-sm"
+                            <a href="{{ route('roles.create') }}" class="btn btn-outline-primary btn-sm"
                                 style="float: right; margin-top: -5px"><i class="fa fa-plus"></i> Create New Role</a>
                         </div>
                     </div>
