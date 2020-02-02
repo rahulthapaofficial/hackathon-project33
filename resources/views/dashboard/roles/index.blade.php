@@ -1,9 +1,13 @@
 @extends('layouts.master')
 
-@push('page_title')
-Roles
+@push('custom-styles')
+<link rel="stylesheet" href="http://demos.ui-lib.com/gull/dist-assets/css/plugins/datatables.min.css" />
 @endpush
+@push('custom-styles')
+<style>
 
+</style>
+@endpush
 @section('main-content')
 <div class="main-content">
     <div class="breadcrumb">
@@ -15,36 +19,34 @@ Roles
     </div>
     <div class="separator-breadcrumb border-top"></div>
     <div class="row mb-4">
-        <div class="col-md-12 mb-3">
+        <div class="col-md-12 mb-4">
             <div class="card text-left">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-10">
-                            <h4 class="card-title mb-3">Roles</h4>
+                            <h4 class="card-title mb-3">All Roles</h4>
                         </div>
                         <div class="col-sm-2 text-white">
-                            <a class="btn btn-primary btn-round btn-sm" style="float: right; margin-top: -5px"><i class="fa fa-plus"></i> Create New Role</a>
+                            <a href="{{ route('roles.create') }}" class="btn btn-primary btn-round btn-sm"
+                                style="float: right; margin-top: -5px"><i class="fa fa-plus"></i> Create New Role</a>
                         </div>
                     </div>
-                    <div class="table-responsive">
-                        <table class="table table-striped">
+                    <div class="table-responsive" id="roleTable">
+                        <table class="display table table-striped table-bordered" id="dataTables" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th scope="col">S.N.</th>
-                                    <th scope="col">Role Name</th>
-                                    <th scope="col">Action</th>
+                                    <th>S.N</th>
+                                    <th>Name</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tfoot>
                                 <tr>
-                                    <th scope="row" style="width: 20%">1</th>
-                                    <td>Smith Doe</td>
-                                    <td style="width: 20%">
-                                        <a class="btn btn-primary text-white"><i class="fa fa-edit"></i>
-                                            Modify</a>
-                                    </td>
+                                    <th>S.N</th>
+                                    <th>Name</th>
+                                    <th>Action</th>
                                 </tr>
-                            </tbody>
+                            </tfoot>
                         </table>
                     </div>
                 </div>
@@ -53,3 +55,17 @@ Roles
     </div>
 </div>
 @endsection
+
+@push('custom-scripts')
+<script src="http://demos.ui-lib.com/gull/dist-assets/js/plugins/datatables.min.js"></script>
+<script src="http://demos.ui-lib.com/gull/dist-assets/js/scripts/datatables.script.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#roleManage').addClass('active');
+        manageTable = $('#dataTables').DataTable({
+            'ajax': base_url + '/dashboard/roles/fetchRoles',
+            'order': []
+        });
+    });
+</script>
+@endpush

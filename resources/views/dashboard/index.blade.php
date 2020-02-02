@@ -320,3 +320,11 @@ Dashboard
     </div>
 </div> --}}
 @endsection
+
+@push('custom-scripts')
+<script>
+    $(document).ready(function () {
+        $('#dashboardManage').addClass('active');
+    });
+</script>
+@endpush

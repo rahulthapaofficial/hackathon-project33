@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Gate;
 use Illuminate\Support\Facades\Auth;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
@@ -84,7 +85,10 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $roles = Role::where([['name', '<>', 'Administrator'], ['name', '<>', 'Super Administrator']])->get();
+        // $branches = Company::whereStatus(1)->get();
+        // return view('pages.users.create', compact(['roles', 'branches']));
+        return view('dashboard.users.create', compact('roles'));
     }
 
     /**
@@ -131,7 +135,7 @@ class UserController extends Controller
     {
         //
     }
-    
+
     public function updatestatus(Request $request, $id)
     {
         if ($request->ajax()) {

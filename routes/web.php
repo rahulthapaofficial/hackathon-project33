@@ -22,10 +22,16 @@ Route::prefix('dashboard')->middleware('auth:web')->group(function () {
 
     Route::prefix('roles')->group(function () {
         Route::get('/', 'Dashboard\RoleController@index')->name('roles.index');
+        Route::get('/create', 'Dashboard\RoleController@create')->name('roles.create');
+        Route::post('/', 'Dashboard\RoleController@store')->name('roles.store');
+        Route::get('/fetchRoles', 'Dashboard\RoleController@fetchRoles')->name('users.fetchRoles');
+        Route::get('/edit/{id}', 'Dashboard\RoleController@edit')->name('roles.edit');
+        Route::patch('/{id}', 'Dashboard\RoleController@update')->name('roles.update');
     });
 
     Route::prefix('users')->group(function () {
         Route::get('/', 'Dashboard\UserController@index')->name('users.index');
+        Route::get('/create', 'Dashboard\UserController@create')->name('users.create');
         Route::get('/fetchUsers', 'Dashboard\UserController@fetchUsers')->name('users.fetchUsers');
         Route::get('/edit/{id}', 'Dashboard\UserController@edit')->name('users.edit');
         Route::patch('/updatestatus/{id}', 'Dashboard\UserController@updatestatus')->name('users.updatestatus');

@@ -6,8 +6,20 @@
 <link rel="stylesheet" href="{{ asset('public/dashboard/css/toastr.min.css') }}">
 <link rel="stylesheet" href="{{ asset('public/dashboard/plugins/dataTables/dataTables.bootstrap.css') }}" />
 <style>
-    #dataTables th{
+    .required {
+        color: red;
+    }
+
+    .table-responsive table#dataTables tr th {
         background: #663399;
         color: white;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 10px;
+    }
+
+    .table-responsive table#dataTables tr td {
+        text-align: center;
+        vertical-align: middle;
     }
 </style>
