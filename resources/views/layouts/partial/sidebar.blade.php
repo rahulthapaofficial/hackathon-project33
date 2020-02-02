@@ -5,12 +5,13 @@
                         class="fa fa-dashboard fa-3x"></i><span class="nav-text">Dashboard</span></a>
                 <div class="triangle"></div>
             </li>
-        <li class="nav-item"><a class="nav-item-hold" href="{{ route('roles.index') }}"><i
+            <li class="nav-item"><a class="nav-item-hold" href="{{ route('roles.index') }}"><i
                         class="fa fa-user-md fa-3x"></i><span class="nav-text">Roles</span></a>
                 <div class="triangle"></div>
             </li>
-            <li class="nav-item"><a class="nav-item-hold" href="#"><i
-                        class="fa fa-user fa-3x"></i><span class="nav-text">Users</span></a>
+            <li class="nav-item" id="userManage">
+                <a class="nav-item-hold" href="{{ route('users.index') }}"><i class="fa fa-user fa-3x"></i><span
+                        class="nav-text">Users</span></a>
                 <div class="triangle"></div>
             </li>
         </ul>
