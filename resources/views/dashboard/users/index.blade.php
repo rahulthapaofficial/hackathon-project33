@@ -77,6 +77,7 @@
 <script src="http://demos.ui-lib.com/gull/dist-assets/js/scripts/datatables.script.min.js"></script>
 <script>
     $(document).ready(function () {
+        alert(base_url);
         $('#userManage').addClass('active');
         manageTable = $('#alternative_pagination_table').DataTable({
             'ajax': base_url + '/users/fetchUsers',
