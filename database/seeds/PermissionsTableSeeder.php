@@ -41,6 +41,12 @@ class PermissionsTableSeeder extends Seeder
                 'suspend-customer'
             ],
 
+            'Vehicles' => [
+                'view-vehicle',
+                'create-vehicle',
+                'modify-vehicle'
+            ],
+
             'Settings' => [
                 'view-setting',
                 'database-backup'

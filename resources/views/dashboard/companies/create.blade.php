@@ -53,7 +53,7 @@ Create User
                 </div>
                 <div class="row">
                   <div class="form-group col-lg-6">
-                    <label>Phone No. <span class="required">*</span></label>
+                    <label>Phone No.</label>
                     <input type="number" class="form-control" name="phone_no" placeholder="Enter Phone No." required>
                     <div class="invalid-feedback">
                       Please Provide Your Company Phone No.

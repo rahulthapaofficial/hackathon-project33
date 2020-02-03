@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard;
+namespace App\Http\Controllers;
 
 use App\Company;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\User;
-use App\Vehicle;
 
-class DashboardController extends Controller
+class HomePageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,13 +14,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $countUsers = User::where('id', '<>', 1)->count();
-        $countCompanies = Company::count();
-        $countActiveCompanies = Company::whereStatus(1)->count();
-        $countVehicles = Vehicle::count();
-        $countAvailableVehicles = Vehicle::count();
-        $companiesMaps = Company::get(['name', 'latitude', 'longitude']);
-        return view('dashboard.index', compact(['countUsers', 'countCompanies', 'countActiveCompanies', 'countVehicles', 'countAvailableVehicles', 'companiesMaps']));
+        $activeCompanies = Company::whereStatus(1)->limit(4)->inRandomOrder()->get();
+        return view('front.index', compact('activeCompanies'));
     }
 
     /**

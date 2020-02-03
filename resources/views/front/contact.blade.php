@@ -3,17 +3,17 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Remember - Multipurpose bootstrap site template</title>
+  <title>Top Atractions of Nepal | VisitNepal2020</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Your page description here" />
   <meta name="author" content="" />
 
   <!-- css -->
-  <link href="css/bootstrap.css" rel="stylesheet" />
-  <link href="css/bootstrap-responsive.css" rel="stylesheet" />
-  <link href="css/prettyPhoto.css" rel="stylesheet" />
+  <link href="public/front/css/bootstrap.css" rel="stylesheet" />
+  <link href="public/front/css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="public/front/css/prettyPhoto.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="public/front/css/style.css" rel="stylesheet">
 
   <!-- Theme skin -->
   <link id="t-colors" href="color/default.css" rel="stylesheet" />
@@ -76,42 +76,10 @@
               <div class="navigation">
                 <nav>
                   <ul class="nav topnav">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>              
+                    
                     <li class="dropdown">
-                      <a href="#">Features <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="typography.html">Typography</a></li>
-                        <li><a href="components.html">Components</a></li>
-                        <li><a href="icons.html">Icons</a></li>
-                        <li><a href="icon-variations.html">Icon variations</a></li>
-
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">Pages <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="pricingbox.html">Pricing boxes</a></li>
-                        <li><a href="404.html">404</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">Portfolio <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="portfolio-2cols.html">Portfolio 2 columns</a></li>
-                        <li><a href="portfolio-3cols.html">Portfolio 3 columns</a></li>
-                        <li><a href="portfolio-4cols.html">Portfolio 4 columns</a></li>
-                        <li><a href="portfolio-detail.html">Portfolio detail</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">Blog <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                        <li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>
-                        <li><a href="post-left-sidebar.html">Post left sidebar</a></li>
-                        <li><a href="post-right-sidebar.html">Post right sidebar</a></li>
-                      </ul>
+                      <a href="#">Blog</a>
                     </li>
                     <li class="active">
                       <a href="contact.html">Contact </a>
@@ -146,7 +114,7 @@
     </section>
 
     <section id="content">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3534.2362054972687!2d83.46433911438321!3d27.64816283469876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39968523d7db0129%3A0xbb4340847ae1d0fc!2sHotel%20Tulip%20Pvt%20Ltd!5e0!3m2!1sen!2snp!4v1580658926544!5m2!1sen!2snp" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       <div class="container">
         <div class="row">
           <div class="span8">
@@ -192,10 +160,10 @@
                 <h5 class="widgetheading">Contact information<span></span></h5>
 
                 <ul class="contact-info">
-                  <li><label>Address :</label> Tinggi sekali tower Jl.Kemacetan timur<br /> Jakarta selatan - Indonesia</li>
-                  <li><label>Phone :</label>+62 123 456 78 / +62 123 456 79</li>
-                  <li><label>Fax : </label>+62 123 456 10 / +62 123 456 11</li>
-                  <li><label>Email : </label> info@yourdomain.com</li>
+                  <li><label>Address :</label> Tilottama-2, Rupandehi<br /> Privince No.5, Nepal</li>
+                  <li><label>Phone :</label>+977-71545795 / +977-71544713</li>
+            
+                  <li><label>Email : </label> contact@visitnepal2020.com </li>
                 </ul>
 
               </div>
@@ -211,7 +179,7 @@
           <div class="span4">
             <div class="widget">
               <div class="footer_logo">
-                <h3><a href="index.html"><i class="icon-tint"></i> Remember</a></h3>
+                <h3><a href="index.html"><i class="icon-tint"></i> visitnepal2020</a></h3>
               </div>
               <address>
 							  <strong>VisitNepal 2020 Inc.</strong><br>
@@ -240,9 +208,7 @@
           </div>
           <div class="span4">
             <div class="widget">
-              <h5 class="widgetheading">From flickr</h5>
-              <div class="flickr_badge">
-                <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=8&amp;display=random&amp;size=s&amp;layout=x&amp;source=user&amp;user=34178660@N03"></script>
+              <img src="https://visitnepal2020.com/wp-content/uploads/2019/12/nepal-logo.svg">
               </div>
               <div class="clear"></div>
             </div>
@@ -254,7 +220,7 @@
           <div class="row">
             <div class="span6">
               <div class="copyright">
-                <p><span>&copy; Remember Inc. All right reserved</span></p>
+                <p><span>VisitNepal2020 Inc. All right reserved</span></p>
               </div>
 
             </div>
@@ -267,7 +233,7 @@
                   Licensing information: https://bootstrapmade.com/license/
                   Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Remember
                 -->
-                Created by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Created by <a href="#">TensionFreeGroupMade</a>
               </div>
             </div>
           </div>

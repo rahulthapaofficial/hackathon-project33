@@ -11,11 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('front.index');
+// Route::get('/', function () {
+//     return view('front.index');
+// });
+
+Route::get('/', 'HomePageController@index')->name('front.index');
+
+Route::get('/contact', function () {
+    return view('front.contact');
 });
 
 Auth::routes();
+// Auth::routes(['register' => false]);
 
 Route::prefix('dashboard')->middleware('auth:web')->group(function () {
     Route::get('/', 'Dashboard\DashboardController@index')->name('dashboard.index');

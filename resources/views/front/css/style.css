@@ -185,9 +185,10 @@ ul.topmenu {
 }
 ul.topmenu li {
 	display:inline;
+	
 }
 ul.topmenu li a {
-	font-size:12px;
+	font-size:16px;
   color: #ddd;
   font-weight:600;
 }
@@ -704,6 +705,7 @@ ul.lush-slider {
 	-webkit-box-shadow: 0 5px 6px -6px #777;
 	   -moz-box-shadow: 0 5px 6px -6px #777;
 	        box-shadow: 0 5px 6px -6px #777;
+}
 }
 
 
@@ -2802,7 +2804,157 @@ ul.the-icons {
 	text-align: center;
 	outline:0;
 }
+.from{
+	margin: 20px;
+	border: 2px solid;
+}
+.to{
+	margin: 20px;
+	border: 2px solid;
+}
+#offer{
+	background-image: url(..img/Visit-nepal.jpg);
+}
+.headingi{
+	margin-top: 10px;
+	text-align: center;
+	color: red;
+}
+.forbackimg{
+	height: 625px;
+	width:800px;
+	margin:0% 25%;
+	background-color: red;
+}
+.backimg{
+	margin:0;
+	background-image: url(../img/dummies/works/1.jpg);
+	/* background-position: center; */
+	width:800px;
+	height: 625px;
+	background-size: cover; 
+}
+	.column1 {
+		margin-top: 25px;
+		float: left;
+		width: 25%;
+		margin-left: 26%;
+}
+.column2 {
+	float: left;
+	width: 25%;
+	height: 200px;
+	margin-top: 20px;
+	margin-left:10%;
+}
+.backimg1{
+	margin:0;
+	background-image: url(../img/dummies/works/4.jpg);
+	/* background-position: center; */
+	width:800px;
+	height: 625px;
+	background-size: cover; 
+}
+.backimg2{
+	margin:0;
+	background-image: url(../img/dummies/works/mountain.png);
+	/* background-position: center; */
+	width:800px;
+	height: 625px;
+	background-size: cover; 
+}
+.backimg3{
+	margin:0;
+	background-image: url(../img/dummies/works/ice.jpg);
+	/* background-position: center; */
+	width:800px;
+	height: 625px;
+	background-size: cover; 
+}
+/* slider */
+/* .carousel-caption {
+	background: rgba(black, 0.3);
+	padding: 15px;
+	margin: 0;
+	font-size: 19px;
+	margin-bottom: 40px;
+}
+.carousel-progress {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(black, 0.3);
+	display: block;
+	width: 100%;
+	height: 5px; */
+}
+	/* Coded with love by Mutiullah Samim */
+	body,
+	html {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		background: #60a3bc !important;
+	}
+	.user_card {
+		height: 400px;
+		width: 350px;
+		margin-top: auto;
+		margin-bottom: auto;
+		background: #f39c12;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		padding: 10px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		border-radius: 5px;
 
-
-
-/* Theme Styler :: End */
+	}
+	.brand_logo_container {
+		position: absolute;
+		height: 170px;
+		width: 170px;
+		top: -75px;
+		border-radius: 50%;
+		background: #60a3bc;
+		padding: 10px;
+		text-align: center;
+	}
+	.brand_logo {
+		height: 150px;
+		width: 150px;
+		border-radius: 50%;
+		border: 2px solid white;
+	}
+	.form_container {
+		margin-top: 100px;
+	}
+	.login_btn {
+		width: 100%;
+		background: #c0392b !important;
+		color: white !important;
+	}
+	.login_btn:focus {
+		box-shadow: none !important;
+		outline: 0px !important;
+	}
+	.login_container {
+		padding: 0 2rem;
+	}
+	.input-group-text {
+		background: #c0392b !important;
+		color: white !important;
+		border: 0 !important;
+		border-radius: 0.25rem 0 0 0.25rem !important;
+	}
+	.input_user,
+	.input_pass:focus {
+		box-shadow: none !important;
+		outline: 0px !important;
+	}
+	.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+		background-color: #c0392b !important;
+	}

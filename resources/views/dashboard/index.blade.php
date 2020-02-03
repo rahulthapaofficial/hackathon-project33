@@ -7,54 +7,39 @@ Dashboard
 @section('main-content')
 <div class="main-content">
     <div class="breadcrumb">
-        <h1 class="mr-2">Version 1</h1>
-        <ul>
-            <li><a href="">Dashboard</a></li>
-            <li>Version 1</li>
-        </ul>
+        <h1 class="mr-2">Dashboard</h1>
     </div>
     <div class="separator-breadcrumb border-top"></div>
     <div class="row">
-        <!-- ICON BG-->
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
-                <div class="card-body text-center"><i class="i-Add-User"></i>
-                    <div class="content">
-                        <p class="text-muted mt-2 mb-0">New Leads</p>
-                        <p class="text-primary text-24 line-height-1 mb-2">205</p>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+            <a href="{{ route('users.index') }}">
+                <div class="card card-icon mb-4">
+                    <div class="card-body text-center"><i class="i-Data-Upload"></i>
+                        <p class="text-primary mt-2 mb-2">Total Users</p>
+                        <p class="text-primary text-24 line-height-1 m-0">{{ $countUsers }}</p>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
-                <div class="card-body text-center"><i class="i-Financial"></i>
-                    <div class="content">
-                        <p class="text-muted mt-2 mb-0">Sales</p>
-                        <p class="text-primary text-24 line-height-1 mb-2">$4021</p>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+            <a href="{{ route('companies.index') }}">
+                <div class="card card-icon mb-4">
+                    <div class="card-body text-center"><i class="i-Data-Upload"></i>
+                        <p class="text-primary mt-2 mb-2">Total Active Companies</p>
+                        <p class="text-primary text-24 line-height-1 m-0">{{ $countActiveCompanies }}</p>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
-                <div class="card-body text-center"><i class="i-Checkout-Basket"></i>
-                    <div class="content">
-                        <p class="text-muted mt-2 mb-0">Orders</p>
-                        <p class="text-primary text-24 line-height-1 mb-2">80</p>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+            <a href="{{ route('vehicles.index') }}">
+                <div class="card card-icon mb-4">
+                    <div class="card-body text-center"><i class="i-Data-Upload"></i>
+                        <p class="text-primary mt-2 mb-2">Total Available Vehicles</p>
+                        <p class="text-primary text-24 line-height-1 m-0">{{ $countAvailableVehicles }}</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-icon-bg card-icon-bg-primary o-hidden mb-4">
-                <div class="card-body text-center"><i class="i-Money-2"></i>
-                    <div class="content">
-                        <p class="text-muted mt-2 mb-0">Expense</p>
-                        <p class="text-primary text-24 line-height-1 mb-2">$1200</p>
-                    </div>
-                </div>
-            </div>
+            </a>
         </div>
     </div>
     <div class="row">

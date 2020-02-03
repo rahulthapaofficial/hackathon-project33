@@ -29,7 +29,7 @@ class UserController extends Controller
         if (Auth::user()->roles->first()->name == 'Super Administrator') {
             $users = User::where('id', '<>', Auth::user()->id)->orderBy('id', 'desc')->get();
         } else {
-            $users = User::where([['id', '<>', Auth::user()->id], ['branch_id', '<>', NULL]])->orderBy('id', 'desc')->get();
+            $users = User::where([['id', '<>', Auth::user()->id], ['company_id', '<>', NULL]])->orderBy('id', 'desc')->get();
         }
         foreach ($users as $key => $user) {
             if ($user->status == 1) {
