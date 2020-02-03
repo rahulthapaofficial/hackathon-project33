@@ -28,7 +28,7 @@ Route::prefix('dashboard')->middleware('auth:web')->group(function () {
     Route::get('/', 'Dashboard\DashboardController@index')->name('dashboard.index');
 
     Route::prefix('roles')->group(function () {
-        Route::get('/', 'Dashboard\RoleController@index')->name('roles.index');
+        Route::get('/', 'Dashboard\RoleController@index')->name('roles.index')->middleware('view-role');
         Route::get('/create', 'Dashboard\RoleController@create')->name('roles.create');
         Route::post('/', 'Dashboard\RoleController@store')->name('roles.store');
         Route::get('/fetchRoles', 'Dashboard\RoleController@fetchRoles')->name('users.fetchRoles');
@@ -37,7 +37,7 @@ Route::prefix('dashboard')->middleware('auth:web')->group(function () {
     });
 
     Route::prefix('users')->group(function () {
-        Route::get('/', 'Dashboard\UserController@index')->name('users.index');
+        Route::get('/', 'Dashboard\UserController@index')->name('users.index')->middleware('view-user');
         Route::get('/create', 'Dashboard\UserController@create')->name('users.create');
         Route::post('/', 'Dashboard\UserController@store')->name('users.store');
         Route::get('/fetchUsers', 'Dashboard\UserController@fetchUsers')->name('users.fetchUsers');

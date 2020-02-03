@@ -29,7 +29,7 @@ class UserController extends Controller
         if (Auth::user()->roles->first()->name == 'Super Administrator') {
             $users = User::where('id', '<>', 1)->orderBy('id', 'desc')->get();
         } else {
-            $users = User::where([['id', '<>', Auth::user()->id], ['company_id', '<>', 1]])->orderBy('id', 'desc')->get();
+            $users = User::where([['id', '<>', 1], ['company_id', '<>', NULL]])->orderBy('id', 'desc')->get();
         }
         foreach ($users as $key => $user) {
             if ($user->status == 1) {
@@ -52,11 +52,11 @@ class UserController extends Controller
                 $buttons .= '<i class="fa fa-exclamation-triangle" style="color: orange"></i> No Permission';
             }
 
-            if ($user->id == 2) {
+            if ($user->id == 1) {
                 $result['data'][$key] = array(
                     $key + 1,
                     $user->first_name . ' ' . $user->last_name,
-                    'Null',
+                    $user->branch->name,
                     $user->email,
                     $user->phone_no,
                     $user->address,
@@ -67,7 +67,7 @@ class UserController extends Controller
                 $result['data'][$key] = array(
                     $key + 1,
                     $user->first_name . ' ' . $user->last_name,
-                    $user->branch->name,
+                    'Null',
                     $user->email,
                     $user->phone_no,
                     $user->address,

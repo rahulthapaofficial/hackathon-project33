@@ -34,5 +34,10 @@ class RolesTableSeeder extends Seeder
         foreach ($permissions as $permission) {
             $administratorRole->givePermissionTo($permission->name);
         }
+
+        Role::create([
+            'name' => 'Tourist',
+            'guard_name' => 'web'
+        ]);
     }
 }
