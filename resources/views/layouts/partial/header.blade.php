@@ -152,8 +152,8 @@
         <!-- User avatar dropdown -->
         <div class="dropdown">
             <div class="user col align-self-end">
-                <img src="http://demos.ui-lib.com/gull/dist-assets/images/faces/1.jpg" id="userDropdown" alt=""
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="{{ asset('public/dashboard/img/profile.png') }}" id="userDropdown" alt="" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                     <div class="dropdown-header">
                         <i class="i-Lock-User mr-1"></i> {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}

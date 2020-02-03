@@ -45,4 +45,14 @@ Route::prefix('dashboard')->middleware('auth:web')->group(function () {
         Route::get('/edit/{id}', 'Dashboard\CompanyController@edit')->name('companies.edit');
         Route::patch('/updatestatus/{id}', 'Dashboard\CompanyController@updatestatus')->name('companies.updatestatus');
     });
+
+    Route::prefix('vehicles')->group(function () {
+        Route::get('/', 'Dashboard\VehicleController@index')->name('vehicles.index');
+        Route::get('/create', 'Dashboard\VehicleController@create')->name('vehicles.create');
+        Route::get('/getBrandsById/{brandId}', 'Dashboard\VehicleController@getBrandsById')->name('vehicles.getBrandsById');
+        Route::post('/', 'Dashboard\VehicleController@store')->name('vehicles.store');
+        Route::get('/fetchVehicles', 'Dashboard\VehicleController@fetchVehicles')->name('vehicles.fetchVehicles');
+        Route::get('/edit/{id}', 'Dashboard\VehicleController@edit')->name('companies.edit');
+        Route::patch('/updatestatus/{id}', 'Dashboard\VehicleController@updatestatus')->name('vehicles.updatestatus');
+    });
 });

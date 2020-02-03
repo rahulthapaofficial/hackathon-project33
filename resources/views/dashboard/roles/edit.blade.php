@@ -33,7 +33,7 @@ Users
                         </div>
                         <div class="row pr-2 pl-2 pb-4">
                             <div class="col-md-12 m-0">
-                                <label class="m-0 pl-4"><i class="fas fa-check-circle"></i> Select Permission for
+                                <label class="m-0"><i class="fa fa-check-circle"></i> Select Permission for
                                     this role</label>
                                 @if($errors->has('permissions'))
                                 <div class="invalid-feedback mx-auto">{{ $errors->first('permissions') }}</div>

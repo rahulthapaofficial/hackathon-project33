@@ -15,8 +15,13 @@
                 <div class="triangle"></div>
             </li>
             <li class="nav-item" id="companyManage">
-                <a class="nav-item-hold" href="{{ route('companies.index') }}"><i class="fa fa-building-o fa-3x"></i><span
+                <a class="nav-item-hold" href="{{ route('companies.index') }}"><i class="fa fa-building-o fa-3x" aria-hidden="true"></i><span
                         class="nav-text">Companies</span></a>
+                <div class="triangle"></div>
+            </li>
+            <li class="nav-item" id="vehicleManage">
+                <a class="nav-item-hold" href="{{ route('vehicles.index') }}"><i class="fa fa-truck fa-3x" aria-hidden="true"></i><span
+                        class="nav-text">Vehicles</span></a>
                 <div class="triangle"></div>
             </li>
         </ul>

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @push('custom-styles')
-<link rel="stylesheet" href="http://demos.ui-lib.com/gull/dist-assets/css/plugins/datatables.min.css" />
+<link rel="stylesheet" href="https://demos.ui-lib.com/gull/dist-assets/css/plugins/datatables.min.css" />
 @endpush
 @push('custom-styles')
 <style>
@@ -57,8 +57,8 @@
 @endsection
 
 @push('custom-scripts')
-<script src="http://demos.ui-lib.com/gull/dist-assets/js/plugins/datatables.min.js"></script>
-<script src="http://demos.ui-lib.com/gull/dist-assets/js/scripts/datatables.script.min.js"></script>
+<script src="https://demos.ui-lib.com/gull/dist-assets/js/plugins/datatables.min.js"></script>
+<script src="https://demos.ui-lib.com/gull/dist-assets/js/scripts/datatables.script.min.js"></script>
 <script>
     $(document).ready(function () {
         $('#roleManage').addClass('active');
