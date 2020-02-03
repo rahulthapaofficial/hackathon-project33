@@ -27,9 +27,15 @@ class VehicleController extends Controller
         $vehicles = Vehicle::orderBy('id', 'desc')->get();
         foreach ($vehicles as $key => $vehicle) {
             if ($vehicle->status == 1) {
-                $status = '<span class="badge badge-success">Active</span>';
+                $status = '<span class="badge badge-success">Available</span>';
             } else {
-                $status = '<span class="badge badge-danger">Suspended</span>';
+                $status = '<span class="badge badge-danger">Unavailable</span>';
+            }
+
+            if ($vehicle->condition == 1) {
+                $condition = '<span class="badge badge-success">Good</span>';
+            } else {
+                $condition = '<span class="badge badge-primary">Average</span>';
             }
 
             $buttons = '';
@@ -50,10 +56,11 @@ class VehicleController extends Controller
             $result['data'][$key] = array(
                 $key + 1,
                 $vehicle->name,
-                $vehicle->reg_no,
-                $vehicle->email,
-                $vehicle->phone_no,
-                $vehicle->address,
+                $vehicle->vehicle_no,
+                $vehicle->vehicleType->name,
+                $vehicle->brand->name,
+                $condition,
+                $vehicle->color,
                 $status,
                 $buttons
             );
@@ -86,7 +93,8 @@ class VehicleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $vehicle = Vehicle::create($request->all());
+        return redirect('dashboard/vehicles')->with('successMsg', 'Vehicle Created Successfully !');
     }
 
     /**

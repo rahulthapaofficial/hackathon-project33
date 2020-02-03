@@ -125,26 +125,8 @@ Dashboard
         <div class="col-lg-4 col-sm-12">
             <div class="card mb-4">
                 <div class="card-body">
-                    <div class="card-title">Sales by Countries</div>
-                    <div id="echartPie" style="height: 300px;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-8 col-md-12">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div class="card-title">This Year Sales</div>
-                    <div id="echartBar" style="height: 300px;"></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-sm-12">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div class="card-title">Sales by Countries</div>
-                    <div id="echartPie" style="height: 300px;"></div>
+                    <div class="card-title">AVAILABLE VEHICLES</div>
+                    <div style="height: 300px;"></div>
                 </div>
             </div>
         </div>

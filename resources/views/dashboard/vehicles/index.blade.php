@@ -47,10 +47,11 @@ Companies
                                 <tr>
                                     <th scope="col" style="width: 5%">S.N</td>
                                     <th scope="col" class="text-left">Name</td>
-                                    <th scope="col" class="text-left">Reg No.</td>
-                                    <th scope="col" class="text-left">Email</td>
-                                    <th scope="col" class="text-left">Phone No.</td>
-                                    <th scope="col" class="text-left">Address</td>
+                                    <th scope="col" class="text-left">Vehicle No.</td>
+                                    <th scope="col" class="text-left">Vehicle Category</td>
+                                    <th scope="col" class="text-left">Vehicle Brand</td>
+                                        <th scope="col" style="width: 8%;">Condition</th>
+                                        <th scope="col" style="width: 8%;">Color</th>
                                     <th scope="col" style="width: 8%;">Status</th>
                                     <th scope="col" style="width: 15%;">Action</th>
                                 </tr>
@@ -59,10 +60,11 @@ Companies
                                 <tr>
                                     <th scope="col" style="width: 5%">S.N</td>
                                     <th scope="col" class="text-left">Name</td>
-                                    <th scope="col" class="text-left">Reg No.</td>
-                                    <th scope="col" class="text-left">Email</td>
-                                    <th scope="col" class="text-left">Phone No.</td>
-                                    <th scope="col" class="text-left">Address</td>
+                                    <th scope="col" class="text-left">Vehicle No.</td>
+                                    <th scope="col" class="text-left">Vehicle Category</td>
+                                    <th scope="col" class="text-left">Vehicle Brand</td>
+                                    <th scope="col" style="width: 8%;">Condition</th>
+                                    <th scope="col" style="width: 8%;">Color</th>
                                     <th scope="col" style="width: 8%;">Status</th>
                                     <th scope="col" style="width: 15%;">Action</th>
                                 </tr>

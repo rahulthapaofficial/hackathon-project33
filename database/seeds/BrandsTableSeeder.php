@@ -41,5 +41,10 @@ class BrandsTableSeeder extends Seeder
             'vehicle_type_id' => '2',
             'name' => 'Ducati'
         ]);
+
+        Brand::create([
+            'vehicle_type_id' => '2',
+            'name' => 'Bajaj'
+        ]);
     }
 }

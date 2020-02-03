@@ -25,6 +25,7 @@ Create User
           <form action="{{ route('vehicles.store') }}" method="POST" role="form" class="needs-validation"
             novalidate="novalidate">
             @csrf
+            {{-- <input type="text" name="company_id" value="{{ Auth }}"> --}}
             <div class="row">
               <div class="col-sm-8">
                 <div class="form-group">
@@ -36,35 +37,42 @@ Create User
                 </div>
                 <div class="form-group">
                   <label>Category <span class="required">*</span></label>
-                  <select name="" id="categoryId" class="form-control" required>
+                  <select name="vehicle_type_id" id="categoryId" class="form-control" required>
                     <option value="" class="selectVehicleBrand" disabled selected>Choose Category</option>
                     @foreach ($vehicletypes as $vehicletype)
                     <option value="{{ $vehicletype->id }}">{{ $vehicletype->name }}</option>
                     @endforeach
                   </select>
                   <div class="invalid-feedback">
-                    Please Provide Your Vehicle Name.
+                    Please Choose Your Vehicle Category Name.
                   </div>
                 </div>
                 <div class="form-group">
                   <label>Brand <span class="required">*</span></label>
-                  <select name="brand_name" id="brandName" class="form-control" disabled required>
+                  <select name="brand_id" id="brandName" class="form-control" disabled required>
                     <option value="" class="selectVehicleBrand" disabled selected>Choose Brand</option>
                   </select>
                   <div class="invalid-feedback">
-                    Please Provide Your Vehicle Name.
+                    Please Choose Your Vehicle Brand Name.
                   </div>
                 </div>
                 <div class="form-group">
                   <label>Vehicle No. <span class="required">*</span></label>
-                  <input type="number" class="form-control" name="reg_no" placeholder="Enter Vehicle No." required>
+                  <input type="text" class="form-control" name="vehicle_no" placeholder="Enter Vehicle No." required>
                   <div class="invalid-feedback">
                     Please Provide Your Vehicle No.
                   </div>
                 </div>
                 <div class="form-group">
+                  <label>Color <span class="required">*</span></label>
+                  <input type="text" class="form-control" name="color" placeholder="Enter Vehicle Color" required>
+                  <div class="invalid-feedback">
+                    Please Provide Your Vehicle Color.
+                  </div>
+                </div>
+                <div class="form-group">
                   <label>Condition <span class="required">*</span></label>
-                  <select class="form-control" name="status">
+                  <select class="form-control" name="condition">
                     <option value="1" selected>Good</option>
                     <option value="0">Average</option>
                   </select>
@@ -75,8 +83,8 @@ Create User
                 <div class="form-group">
                   <label>Status <span class="required">*</span></label>
                   <select class="form-control" name="status">
-                    <option value="1" selected>Active</option>
-                    <option value="0">Inactive</option>
+                    <option value="1" selected>Available</option>
+                    <option value="0">Unavailable</option>
                   </select>
                 </div>
               </div>
