@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @push('page_title')
-Users
+Create Role
 @endpush
 
 @section('main-content')
@@ -9,7 +9,7 @@ Users
     <div class="breadcrumb">
         <h1>Dashboard</h1>
         <ul>
-            <li><a href="href">Users</a></li>
+            <li><a href="href">Roles</a></li>
             <li>Create</li>
         </ul>
     </div>
