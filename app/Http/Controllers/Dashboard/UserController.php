@@ -27,9 +27,9 @@ class UserController extends Controller
         $result = array('data' => array());
 
         if (Auth::user()->roles->first()->name == 'Super Administrator') {
-            $users = User::where('id', '<>', Auth::user()->id)->orderBy('id', 'desc')->get();
+            $users = User::where('id', '<>', 1)->orderBy('id', 'desc')->get();
         } else {
-            $users = User::where([['id', '<>', Auth::user()->id], ['company_id', '<>', NULL]])->orderBy('id', 'desc')->get();
+            $users = User::where([['id', '<>', Auth::user()->id], ['company_id', '<>', 1]])->orderBy('id', 'desc')->get();
         }
         foreach ($users as $key => $user) {
             if ($user->status == 1) {
@@ -99,7 +99,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::create($request->all());
+        return redirect('dashboard/users')->with('successMsg', 'User Created Successfully !');
     }
 
     /**

@@ -39,6 +39,7 @@ Route::prefix('dashboard')->middleware('auth:web')->group(function () {
     Route::prefix('users')->group(function () {
         Route::get('/', 'Dashboard\UserController@index')->name('users.index');
         Route::get('/create', 'Dashboard\UserController@create')->name('users.create');
+        Route::post('/', 'Dashboard\UserController@store')->name('users.store');
         Route::get('/fetchUsers', 'Dashboard\UserController@fetchUsers')->name('users.fetchUsers');
         Route::get('/edit/{id}', 'Dashboard\UserController@edit')->name('users.edit');
         Route::patch('/updatestatus/{id}', 'Dashboard\UserController@updatestatus')->name('users.updatestatus');

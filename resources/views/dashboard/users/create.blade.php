@@ -18,7 +18,7 @@ Create User
         <div class="col-md-12">
             <div class="card mb-4">
                 <div class="card-body">
-                    <form class="needs-validation" novalidate="novalidate">
+                    <form action="{{ route('users.store') }}" class="needs-validation" novalidate="novalidate">
                         <div class="form-row">
                             <div class="col-md-12 mb-3">
                                 <label for="validationCustom01">Company <span class="required">*</span></label>
@@ -104,8 +104,8 @@ Create User
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
                                         <label class="radio radio-primary">
-                                            <input type="radio" name="gender" value="male"><span>Male</span><span
-                                                class="checkmark"></span>
+                                            <input type="radio" name="gender" value="male"
+                                                checked><span>Male</span><span class="checkmark"></span>
                                         </label>
                                     </div>
                                     <div class="col-md-6 mb-3">
